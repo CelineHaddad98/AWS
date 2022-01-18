@@ -10,3 +10,8 @@ message = SQSclient.client.receive_message(
 
 
 print(message)
+
+SQSclient.client.delete_message(
+    QueueUrl=SQSclient.url,
+    ReceiptHandle=message['Messages'][0]['ReceiptHandle']
+)
