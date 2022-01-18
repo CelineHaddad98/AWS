@@ -20,7 +20,7 @@ services:
     container_name: aws-test
     depends_on:
       - aws-local
-    command: ["python", "main.py"]
+    command: ["python", "create_topic.py"]
     
 
   aws-local:
