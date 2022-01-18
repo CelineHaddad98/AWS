@@ -20,7 +20,7 @@ services:
     container_name: aws-test
     depends_on:
       - aws-local
-    command: ["python", "send_and_recieve.py"]
+    command: ["python", "publish_and_read.py"]
     
 
   aws-local:
