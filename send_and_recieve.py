@@ -9,4 +9,9 @@ message = SQSclient.client.receive_message(
     QueueUrl=SQSclient.url)
 
 
-print(message)
+print(message['Messages'][0]['Body'])
+
+SQSclient.client.delete_message(
+    QueueUrl=SQSclient.url,
+    ReceiptHandle=message['Messages'][0]['ReceiptHandle']
+)
